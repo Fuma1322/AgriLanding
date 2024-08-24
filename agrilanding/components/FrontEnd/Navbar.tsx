@@ -8,7 +8,6 @@ export default function () {
 
     const [state, setState] = useState(false)
 
-    // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Home", path: "/" },
         { title: "About Us", path: "/about" },
@@ -16,7 +15,7 @@ export default function () {
     ]
 
     return (
-        <nav className="bg-white border-b w-full md:static md:text-sm md:border-none">
+        <nav className="bg-white w-full md:static md:text-sm md:border-none">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                 <Link href="/">
@@ -41,27 +40,27 @@ export default function () {
                     </div>
                 </div>
                 <div className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${state ? 'block' : 'hidden'}`}>
-                    <ul className="justify-center items-center space-y-10 md:flex md:space-x-6 md:space-y-0">
+                    <ul className="justify-end items-center space-y-10 md:flex md:space-x-6 md:space-y-0">
                         {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx} className="text-black font-semibold hover:text-gray-600">
-                                        <a href={item.path} className="block">
+                                        <a href={item.path} className="block mr-20">
                                             {item.title}
                                         </a>
                                     </li>
                                 )
                             })
-                        } 
-                    </ul>
-                </div>
-                <div className='space-y-6 items-center gap-x-10 md:flex md:space-y-0'>
+                        }
+                        <div className='gap-x-6  md:flex md:space-y-0'>
                     <Button className="bg-[#204E51] w-[90px]">
                         Login
                     </Button>
                     <Button className="border border-[#204E51] text-[#204E51]" variant='ghost'>
                         Sign Up
                     </Button>
+                </div>
+                    </ul>
                 </div>
             </div>
         </nav>

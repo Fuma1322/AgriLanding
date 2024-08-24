@@ -8,7 +8,7 @@ const Hero = () => {
     <Section>
       {/* Background container */}
       <div
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
+        className="relative h-[520px] bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage: `url(https://s3-alpha-sig.figma.com/img/51c0/c7df/ca620ffb1bccc651254509a40dafb2e8?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MBcAwSizHcjRFqip78akVHViz0NXf1Xc8J5O7D5ZNmS1tkJCGZp9Q8PHw1h3lPiPBK7oeuKlIvgW0S0sZzzv2Db2ZoCQbFkBEFuqpC9-WDXyfhLghN6tOoZeWnLxvIcj7c6rZUlnyu6NoX47AmRDqN9cYnJzK~bNOO2BdBEO9JdlfeEH3K1j3iZIdO6ziuCjX7Fv~6Y8LJZZCAuZfgAFkw0Xcnnm0UbQgKFmn2RKXEkyF0htUbnh8swWqUvu1Ru7vBT8WcBSlVYWuj2jex7XODCTw1Ospgg96nQFVAwsWED8YHXIoFkyWkSL3omZ3ktlTG~a-X~BsYEWY2EeXRmPIw__)`,
         }}

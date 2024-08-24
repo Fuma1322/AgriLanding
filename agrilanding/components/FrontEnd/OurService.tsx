@@ -1,23 +1,28 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { PenTool, Globe, Layout, Twitter, NotebookPen, ChartScatter, Users } from "lucide-react"; // Import specific Lucide icons
+import Link from "next/link";
 
 const services = [
   {
     icon: <NotebookPen className="h-16 w-16" />,
     description: "Blog and Article Writing",
+    href:"#"
   },
   {
     icon: <Users className="h-16 w-16" />,
     description: "Website Content",
+    href:"#"
   },
   {
     icon: <ChartScatter className="h-16 w-16" />,
     description: "Content Strategy and Consulting",
+    href:"#"
   },
   {
     icon: <Globe className="h-16 w-16" />,
     description: "Social Media Management",
+    href:"#"
   },
 ];
 
@@ -42,12 +47,14 @@ export default function Service() {
                     className="h-full rounded-2xl bg-white p-4 border border-neutral-200 shadow-xl flex flex-col items-center justify-center"
                   >
                     {/* Render the icon */}
-                    <p className= "text-2xl rounded-full px-2 py-0.5 mt-4">
-                      {service.icon}
-                    </p>
-                    <p className="sm:text-sm lg:text-xl text-center font-semibold text-neutral-500 mt-4">
-                      {service.description}
-                    </p>
+                    <Link href={service.href}>
+                      <div className= "text-xl rounded-full px-20 py-0.5 mt-4">
+                        {service.icon}
+                      </div>
+                      <p className="sm:text-sm lg:text-xl text-center font-semibold text-neutral-500 mt-4">
+                        {service.description}
+                      </p>
+                    </Link>
                   </motion.div>
                 </li>
               ))}
