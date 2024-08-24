@@ -21,7 +21,7 @@ export default function Cards() {
           </div>
           <div className="mt-6 gap-12 sm:mt-0 md:flex lg:block">
             <div className="max-w-2xl">
-              <h1 className="scroll-m-20 text-[#204E51] text-5xl font-bold tracking-tight lg:text-5xl py-10">
+              <h1 className="scroll-m-20 text-[#204E51] text-5xl font-bold text-left tracking-tight lg:text-5xl py-10">
                 Our Passion for Agriculture Nurturing Growth and Sustaining the Future
               </h1>
               <p className="mt-3 max-w-xl">
@@ -29,7 +29,7 @@ export default function Cards() {
               </p>
             </div>
             <div className="flex items-start justify-start py-14">
-              <Link href="/opportunities">
+              <Link href="/get_started">
                 <Button className="bg-[#204E51]">
                   Get Started
                 </Button>
