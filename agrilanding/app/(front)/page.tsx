@@ -1,5 +1,6 @@
 'use client'
 
+import Featured from '@/components/FrontEnd/Featured'
 import Hero from '@/components/FrontEnd/Hero'
 import Service from '@/components/FrontEnd/OurService'
 import Story from '@/components/FrontEnd/OurStory'
@@ -11,6 +12,7 @@ export default function page() {
       <Hero />
       <Story />
       <Service />
+      <Featured />
       {/* <Footer /> */}
     </div>
   )
