@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 const services = [
   {
@@ -70,6 +71,11 @@ export default function Feature() {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="flex justify-center items-center mt-16">
+        <Button variant="link" className="text-[#204E51] underline font-bold text-base">
+          See all product
+        </Button>
         </div>
       </div>
     </div>

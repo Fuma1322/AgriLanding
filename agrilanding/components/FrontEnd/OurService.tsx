@@ -51,7 +51,7 @@ export default function Service() {
                       <div className= "text-xl rounded-full px-20 py-0.5 mt-4">
                         {service.icon}
                       </div>
-                      <p className="sm:text-sm lg:text-xl text-center font-semibold text-neutral-500 mt-4">
+                      <p className="text-xl text-center font-semibold text-neutral-500 mt-4">
                         {service.description}
                       </p>
                     </Link>
