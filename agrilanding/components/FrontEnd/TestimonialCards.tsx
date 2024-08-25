@@ -1,40 +1,88 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "../ui/button";
+"use client";
 
-export default function TestimonialCards() {
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+
+type Slide = {
+  id: number;
+  src: string;
+};
+
+export default function Carousel() {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+
+  const slides: Slide[] = [
+    { id: 0, src: "/agri1.png" },
+    { id: 1, src: "/agri2.png" },
+    { id: 2, src: "/agri3.png" },
+  ];
+
+  const textColors = ["text-blue-500", "text-green-500", "text-red-500"];
+
+  const handlePrev = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToSlide = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  // Autoplay effect
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      handleNext();
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [activeIndex]);
+
   return (
-    <section className="py-14 ml-3">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="bg-white p-8 text-gray-600 dark:text-gray-300 gap-x-12 items-start justify-between lg:flex lg:flex-row-reverse md:px-8 relative">
-          <div className="sm:hidden lg:block lg:max-w-xl relative">
-            <Image
-              src="/agri2.png"
-              className="rounded-lg"
-              alt=""
-              height={900}
-              width={900}
-            />
+    <div className="relative w-full">
+      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`duration-700 ease-in-out absolute w-full h-full transition-opacity flex items-center justify-center ${
+              index === activeIndex ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `url(${slide.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
           </div>
-          <div className="mt-6 gap-12 sm:mt-0 md:flex lg:block">
-            <div className="max-w-2xl">
-              <h1 className="scroll-m-20 text-[#204E51] text-5xl font-bold text-left tracking-tight lg:text-xl py-10">
-                Our Passion for Agriculture Nurturing Growth and Sustaining the Future
-              </h1>
-              <p className="mt-3 max-w-xl">
-                Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.
-              </p>
-            </div>
-            <div className="flex items-start justify-start py-14">
-              <Link href="/get_started">
-                <Button className="bg-[#204E51]">
-                  Get Started
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+
+      {/* Button container to wrap buttons and position them outside the carousel */}
+      <div className="flex justify-between items-center mt-4">
+        <button
+          type="button"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 hover:bg-white/50 dark:hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:focus:ring-gray-800/70"
+          onClick={handlePrev}
+        >
+          <ChevronLeft />
+          <span className="sr-only">Previous</span>
+        </button>
+
+        <button
+          type="button"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 hover:bg-white/50 dark:hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:focus:ring-gray-800/70"
+          onClick={handleNext}
+        >
+          <ChevronRight />
+          <span className="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
   );
 }

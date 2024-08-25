@@ -1,7 +1,5 @@
 import React from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
-import { Card, CardContent } from "../ui/card";
-import TestimonialCards from "./TestimonialCards";
+import Carousel from "./TestimonialCards";
 
 export default function Testimonials() {
   return (
@@ -15,22 +13,8 @@ export default function Testimonials() {
           <p className="mt-3 flex items-center justify-center">
             Li Europan lingues es membres del sam familie. Lor separat existentie es <br/> un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. 
           </p>
-          <div className="flex justify-center items-center w-full">
-          <Carousel className="">
-            <CarouselContent>
-                <CarouselItem>
-                    <div className="p-1">
-                    <Card className="w-[100px] h-[400px]">
-                        <CardContent className="flex items-center justify-center">
-                        <TestimonialCards />
-                        </CardContent>
-                    </Card>
-                    </div>
-                </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-            </Carousel>
+          <div className="py-14">
+          <Carousel />
           </div>
         </div>
         </div>
