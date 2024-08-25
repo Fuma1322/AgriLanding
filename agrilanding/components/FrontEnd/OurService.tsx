@@ -46,7 +46,6 @@ export default function Service() {
                   <motion.div
                     className="h-full rounded-2xl bg-white p-4 border border-neutral-200 shadow-xl flex flex-col items-center justify-center"
                   >
-                    {/* Render the icon */}
                     <Link href={service.href}>
                       <div className= "text-xl rounded-full px-20 py-0.5 mt-4">
                         {service.icon}
