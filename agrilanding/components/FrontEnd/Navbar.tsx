@@ -52,14 +52,14 @@ export default function () {
                                 )
                             })
                         }
-                        <div className='gap-x-6  md:flex md:space-y-0'>
-                    <Button className="bg-[#204E51] w-[90px]">
-                        Login
-                    </Button>
-                    <Button className="border border-[#204E51] text-[#204E51]" variant='ghost'>
-                        Sign Up
-                    </Button>
-                </div>
+                        <div className='gap-x-6 md:flex md:space-y-0'>
+                            <Button className="bg-[#204E51] w-[90px]">
+                                Login
+                            </Button>
+                            <Button className="border border-[#204E51] text-[#204E51]" variant='ghost'>
+                                Sign Up
+                            </Button>
+                        </div>
                     </ul>
                 </div>
             </div>

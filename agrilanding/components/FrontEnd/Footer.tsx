@@ -1,27 +1,40 @@
-import Image from "next/image";
 import Link from "next/link";
-import Balancer from "react-wrap-balancer";
 import { Button } from "../ui/button";
-import { Github, Twitter, Facebook } from "lucide-react";
-import { Container, Section } from "../ui/craft";
+import { Github, Twitter, Facebook, Instagram } from "lucide-react";
+
+const buttons = [
+  {
+    icons: <Instagram className="text-[#204E51]" />,
+  },
+  {
+    icons: <Twitter className="text-[#204E51]" />,
+  },
+  {
+    icons: <Facebook className="text-[#204E51]" />,
+  },
+  {
+    icons: <Github className="text-[#204E51]" />,
+  },
+]
 
 export default function Footer() {
   return (
-    <footer>
-      <Section className="bg-[#204E51]">
-        <Container className="grid gap-12 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
-          <div className="not-prose flex flex-col gap-6">
+    <footer className="bg-[#204E51] lg:py-32 sm:py-44">
+      <section>
+        <div className="grid md:grid-cols-[1.5fr_0.5fr_0.5fr] lg:ml-72">
+          <div className="flex flex-col gap-4">
             <Link href="/">
                 <h2 className="font-bold text-3xl text-white">AgriVista Farms</h2>
             </Link>
             <p>
-              <Balancer className="text-white">
-              Li Europan lingues es membres del sam familie. Lor separat existentie 
-              </Balancer>
+              <p className="text-white">
+              Li Europan lingues es membres del sam <br/>
+              familie. Lor separat existentie 
+              </p>
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <h5 className="font-bold text-white">Pages</h5>
+            <h3 className="font-bold text-white">Pages</h3>
             <Link href="/" className="text-white">Home</Link>
             <Link href="/" className="text-white">About</Link>
             <Link href="/" className="text-white">Product</Link>
@@ -34,21 +47,19 @@ export default function Footer() {
             <Link href="/" className="text-white">Contact Us</Link>
             <Link href="/" className="text-white">Benefit</Link>
           </div>
-        </Container>
-        <Container className="not-prose flex flex-col justify-between gap-6 md:flex-row md:items-center md:gap-2">
-          <div className="flex gap-2">
-            <Button variant="outline" size="icon">
-              <Github />
+        </div>
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center md:gap-2">
+          <div className="flex gap-2 lg:ml-72">
+          {buttons.map((items,idx) => {
+            return (
+            <Button key={idx} variant="outline" size="icon">
+              {items.icons}
             </Button>
-            <Button variant="outline" size="icon">
-              <Twitter />
-            </Button>
-            <Button variant="outline" size="icon">
-              <Facebook />
-            </Button>
+            )
+          })}
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
     </footer>
   );
 }

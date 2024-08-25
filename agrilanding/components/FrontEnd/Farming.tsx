@@ -7,7 +7,7 @@ const Farming = () => {
     <Section>
       {/* Background container */}
       <div
-        className="relative h-[520px] bg-cover bg-center flex items-center justify-center"
+        className="relative h-[590px] bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage: `url("/agri7.png")`,
         }}
@@ -15,7 +15,7 @@ const Farming = () => {
         {/* Overlay content */}
         <Container className="flex flex-col items-start text-start text-white p-10 rounded-md">
         <h1 className="scroll-m-20 text-5xl font-bold tracking-tight lg:text-7xl">
-          Sustainable Farming Meets Technology: Building a Greener Future
+          Sustainable Farming <br/> Meets Technology: <br/> Building a Greener Future
         </h1>
           <div className="not-prose mt-6 flex gap-10 md:mt-12">
             <Button className="bg-[#204E51]">

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "../ui/button";
 import { MoveRight } from "lucide-react";
 import Test from "./Test";
@@ -15,10 +14,10 @@ export default function Benefit() {
           <div className="mt-6 gap-12 sm:mt-0 md:flex lg:block">
             <div className="max-w-2xl">
               <h1 className="scroll-m-20 text-[#204E51] text-5xl font-bold text-left tracking-tight lg:text-6xl py-16">
-              The Benefits of Choosing Our Expertise
+              The Benefits <br/> of Choosing <br/> Our Expertise
               </h1>
               <p className="mt-3 max-w-xl">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. 
+              Li Europan lingues es membres del sam familie. <br/> Lor separat existentie es un myth. Por scientie, <br/> musica, sport etc, litot Europa usa li sam vocabular. 
               </p>
             </div>
             <div className="flex items-start justify-start py-14">

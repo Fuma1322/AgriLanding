@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
 import { Card, CardContent } from "../ui/card";
+import TestimonialCards from "./TestimonialCards";
 
 export default function Testimonials() {
   return (
@@ -12,25 +13,25 @@ export default function Testimonials() {
             Testimonials
           </h3>
           <p className="mt-3 flex items-center justify-center">
-            Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. 
+            Li Europan lingues es membres del sam familie. Lor separat existentie es <br/> un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. 
           </p>
-          <Carousel className="w-full max-w-xs">
+          <div className="flex justify-center items-center w-full">
+          <Carousel className="">
             <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index}>
+                <CarouselItem>
                     <div className="p-1">
-                    <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-4xl font-semibold">{index + 1}</span>
+                    <Card className="w-[100px] h-[400px]">
+                        <CardContent className="flex items-center justify-center">
+                        <TestimonialCards />
                         </CardContent>
                     </Card>
                     </div>
                 </CarouselItem>
-                ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
             </Carousel>
+          </div>
         </div>
         </div>
       </div>

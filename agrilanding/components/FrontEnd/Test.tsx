@@ -4,17 +4,17 @@ export default function Test() {
   const features = [
     {
       icon: <Star />,
-      title: "20 +",
+      title: "20+",
       desc: "Years Of Experience",
     },
     {
       icon: <HexagonIcon />,
-      title: "40 +",
+      title: "40+",
       desc: "Product",
     },
     {
       icon: <Check />,
-      title: "2,458 +",
+      title: "2,458+",
       desc: "Satisfied Clients",
     },
     {
@@ -28,11 +28,10 @@ export default function Test() {
     <section className="">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="mt-12">
-          {/* Adjust grid-cols to be 1 column on small screens and 2 on larger ones */}
-          <ul className="grid gap-y-4 gap-x-4 sm:grid-cols-2 lg:grid-cols-1 bg-[#204E51] rounded-lg p-6 sm:p-8 lg:p-16">
+          <ul className="grid gap-y-4 gap-x-4 sm:grid-cols-2 lg:grid-cols-1 bg-[#204E51] rounded-lg p-6 sm:p-8 lg:p-14">
             {features.map((item, idx) => (
               <li key={idx} className="flex flex-col md:flex-row gap-x-4 p-4 rounded-lg items-center">
-                <div className="flex-none w-12 h-12 md:w-16 md:h-16 bg-[#204E45] text-white rounded-full flex items-center justify-center">
+                <div className="flex-none w-10 h-10 md:w-16 md:h-16 bg-[#204E45] text-white rounded-full flex items-center justify-center">
                   {item.icon}
                 </div>
                 <div className="flex flex-col justify-center text-center md:text-left mt-2 md:mt-0">

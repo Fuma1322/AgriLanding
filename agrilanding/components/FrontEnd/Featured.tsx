@@ -30,7 +30,7 @@ const services = [
   },
 ];
 
-export default function Feature() {
+export default function Featured() {
   return (
     <div>
     <div className="py-14">
@@ -40,7 +40,7 @@ export default function Feature() {
             Our Featured Product
           </h3>
           <p className="mt-3 flex items-center justify-center">
-            Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica.
+            Li Europan lingues es membres del sam familie. Lor <br/> separat existentie es un myth. Por scientie, musica.
           </p>
         </div>
         <div className="mt-12 flex justify-center">
