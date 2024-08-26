@@ -6,9 +6,7 @@ A modern and responsive landing page for an agriculture-InterPulse project, buil
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Setup Instructions](#setup-instructions)
 - [Deployment](#deployment)
-- [Project Structure](#project-structure)
 - [License](#license)
 
 ## Features
