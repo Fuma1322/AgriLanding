@@ -13,6 +13,7 @@ export default function Testimonials() {
           <p className="mt-3 flex items-center justify-center">
             Li Europan lingues es membres del sam familie. Lor separat existentie es <br/> un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. 
           </p>
+          {/* Carousel with testimonial cards */}
           <div className="py-14">
           <CarouselDemo />
           </div>
