@@ -18,6 +18,7 @@ export default function () {
         <nav className="bg-white w-full md:static md:text-sm md:border-none">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                    {/* logo text */}
                     <Link href="/">
                         <h2 className="font-bold text-xl">Agrivista Farms</h2>
                     </Link>
@@ -52,6 +53,7 @@ export default function () {
                                 )
                             })
                         }
+                        {/* Login and Sign Up buttons */}
                         <div className="flex flex-col gap-y-4 gap-x-6 md:flex-row md:space-y-0">
                             <Button className="bg-[#204E51] lg:w-[90px]">
                                 Login
