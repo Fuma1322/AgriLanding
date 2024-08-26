@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "./TestimonialCards";
+import { CarouselDemo } from "./Carousel";
 
 export default function Testimonials() {
   return (
@@ -14,7 +14,7 @@ export default function Testimonials() {
             Li Europan lingues es membres del sam familie. Lor separat existentie es <br/> un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. 
           </p>
           <div className="py-14">
-          <Carousel />
+          <CarouselDemo />
           </div>
         </div>
         </div>
