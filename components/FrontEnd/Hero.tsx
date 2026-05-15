@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <Section>
+    <>
       {/* Background container */}
       <div
         className="relative h-[620px] bg-cover bg-center flex items-center justify-center"
@@ -37,7 +37,7 @@ const Hero = () => {
           </div>
         </Container>
       </div>
-    </Section>
+    </>
   );
 };
 
